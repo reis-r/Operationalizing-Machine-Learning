@@ -9,7 +9,6 @@ name = "bank-marketing"
 
 # load existing web service
 service = Webservice(name=name, workspace=ws)
-logs = service.get_logs()
 
-for line in logs.split('\n'):
-    print(line)
+# Enable Application Insights
+service.update(enable_app_insights=True)
