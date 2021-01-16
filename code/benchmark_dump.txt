@@ -1,0 +1,167 @@
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 56396557-2a0e-4b7d-8ccd-51c24156ab13.southcentralus.azurecontainer.io (be patient)...INFO: POST header == 
+---
+POST /score HTTP/1.0
+Content-length: 812
+Content-type: application/json
+Authorization: Bearer Ns5V6GjGdhbOmiGPZYqPC6ErLN8Fodet
+Host: 56396557-2a0e-4b7d-8ccd-51c24156ab13.southcentralus.azurecontainer.io
+User-Agent: ApacheBench/2.3
+Accept: */*
+
+
+---
+LOG: header received:
+HTTP/1.0 200 OK
+Content-Length: 33
+Content-Type: application/json
+Date: Sat, 16 Jan 2021 15:28:29 GMT
+Server: nginx/1.10.3 (Ubuntu)
+X-Ms-Request-Id: 74e93069-3b68-49fa-b949-cd9c5e33cda8
+X-Ms-Run-Function-Failed: False
+
+"{\"result\": [\"yes\", \"no\"]}"
+LOG: Response code = 200
+LOG: header received:
+HTTP/1.0 200 OK
+Content-Length: 33
+Content-Type: application/json
+Date: Sat, 16 Jan 2021 15:28:32 GMT
+Server: nginx/1.10.3 (Ubuntu)
+X-Ms-Request-Id: 060870be-0899-4b10-9ae2-4c76f148f7f9
+X-Ms-Run-Function-Failed: False
+
+"{\"result\": [\"yes\", \"no\"]}"
+LOG: Response code = 200
+LOG: header received:
+HTTP/1.0 200 OK
+Content-Length: 33
+Content-Type: application/json
+Date: Sat, 16 Jan 2021 15:28:35 GMT
+Server: nginx/1.10.3 (Ubuntu)
+X-Ms-Request-Id: db7dde21-4300-44be-831c-aa997bf37bc8
+X-Ms-Run-Function-Failed: False
+
+"{\"result\": [\"yes\", \"no\"]}"
+LOG: Response code = 200
+LOG: header received:
+HTTP/1.0 200 OK
+Content-Length: 33
+Content-Type: application/json
+Date: Sat, 16 Jan 2021 15:28:38 GMT
+Server: nginx/1.10.3 (Ubuntu)
+X-Ms-Request-Id: ec41d7aa-0585-409e-90e9-8e593b9d917a
+X-Ms-Run-Function-Failed: False
+
+"{\"result\": [\"yes\", \"no\"]}"
+LOG: Response code = 200
+LOG: header received:
+HTTP/1.0 200 OK
+Content-Length: 33
+Content-Type: application/json
+Date: Sat, 16 Jan 2021 15:28:41 GMT
+Server: nginx/1.10.3 (Ubuntu)
+X-Ms-Request-Id: df8f6b15-412d-4311-8e25-910f57e4de97
+X-Ms-Run-Function-Failed: False
+
+"{\"result\": [\"yes\", \"no\"]}"
+LOG: Response code = 200
+LOG: header received:
+HTTP/1.0 200 OK
+Content-Length: 33
+Content-Type: application/json
+Date: Sat, 16 Jan 2021 15:28:44 GMT
+Server: nginx/1.10.3 (Ubuntu)
+X-Ms-Request-Id: df7b34e5-867b-4e70-8b57-df987262f04a
+X-Ms-Run-Function-Failed: False
+
+"{\"result\": [\"yes\", \"no\"]}"
+LOG: Response code = 200
+LOG: header received:
+HTTP/1.0 200 OK
+Content-Length: 33
+Content-Type: application/json
+Date: Sat, 16 Jan 2021 15:28:47 GMT
+Server: nginx/1.10.3 (Ubuntu)
+X-Ms-Request-Id: 3400b95a-773e-4423-91e9-116b5d35221e
+X-Ms-Run-Function-Failed: False
+
+"{\"result\": [\"yes\", \"no\"]}"
+LOG: Response code = 200
+LOG: header received:
+HTTP/1.0 200 OK
+Content-Length: 33
+Content-Type: application/json
+Date: Sat, 16 Jan 2021 15:28:50 GMT
+Server: nginx/1.10.3 (Ubuntu)
+X-Ms-Request-Id: ce184a39-7f6f-48cd-807c-faba544210b9
+X-Ms-Run-Function-Failed: False
+
+"{\"result\": [\"yes\", \"no\"]}"
+LOG: Response code = 200
+LOG: header received:
+HTTP/1.0 200 OK
+Content-Length: 33
+Content-Type: application/json
+Date: Sat, 16 Jan 2021 15:28:53 GMT
+Server: nginx/1.10.3 (Ubuntu)
+X-Ms-Request-Id: 38f06211-b68e-41fe-8c4c-a209315390b6
+X-Ms-Run-Function-Failed: False
+
+"{\"result\": [\"yes\", \"no\"]}"
+LOG: Response code = 200
+LOG: header received:
+HTTP/1.0 200 OK
+Content-Length: 33
+Content-Type: application/json
+Date: Sat, 16 Jan 2021 15:28:55 GMT
+Server: nginx/1.10.3 (Ubuntu)
+X-Ms-Request-Id: 24d98a45-0e83-4a75-a925-7f5d3b22619e
+X-Ms-Run-Function-Failed: False
+
+"{\"result\": [\"yes\", \"no\"]}"
+LOG: Response code = 200
+..done
+
+
+Server Software:        nginx/1.10.3
+Server Hostname:        56396557-2a0e-4b7d-8ccd-51c24156ab13.southcentralus.azurecontainer.io
+Server Port:            80
+
+Document Path:          /score
+Document Length:        33 bytes
+
+Concurrency Level:      1
+Time taken for tests:   29.199 seconds
+Complete requests:      10
+Failed requests:        0
+Total transferred:      2600 bytes
+Total body sent:        10640
+HTML transferred:       330 bytes
+Requests per second:    0.34 [#/sec] (mean)
+Time per request:       2919.946 [ms] (mean)
+Time per request:       2919.946 [ms] (mean, across all concurrent requests)
+Transfer rate:          0.09 [Kbytes/sec] received
+                        0.36 kb/s sent
+                        0.44 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        2    3   0.5      3       3
+Processing:  2399 2917 331.7   2994    3302
+Waiting:     2399 2917 331.6   2994    3301
+Total:       2402 2920 331.7   2996    3303
+
+Percentage of the requests served within a certain time (ms)
+  50%   2996
+  66%   3100
+  75%   3297
+  80%   3298
+  90%   3303
+  95%   3303
+  98%   3303
+  99%   3303
+ 100%   3303 (longest request)
