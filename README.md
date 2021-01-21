@@ -53,6 +53,13 @@ Now that the application is deployed, it's time to consume it. For this a script
 
 ![The script endpoint.py running](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/endpoint_python_script_working.PNG)
 
+### Benchmark the model using Apache Benchmark
+It's important to load-test the model so that performance problems can be detected. For that we used the script [benchmark.sh](https://github.com/reis-r/Operationalizing-Machine-Learning/blob/master/code/benchmark.sh). It will use Apache Benchmark to make calls to the deployed service and measure the performance.
+
+![Apache Benchmark running](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/apache_benchmark_running.PNG)
+
+We se that the longest requests took about 3399 ms, which is fast enough and far from the default timeout of 60 seconds for scoring on Azure.
+
 ## Screen Recording
 
 This is a quick screencast showing the trained model, the pipeline endpoint and testing the machine learning HTTP API created by Azure:
