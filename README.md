@@ -29,6 +29,8 @@ We deployed the best model produced in the last section to an Azure Container In
 
 ![Deploying the best model](https://raw.githubusercontent.com/reis-r/nd00333_AZMLND_C2/master/screenshots/deploying.PNG)
 
+![Best model deployed](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/endpoint.PNG)
+
 ### Enable logging with Application Insights
 It's important to keep logging of our applications, to fix eventual problems that might occur. For that, we enable Application Insights to our deployiment using the SDK. The full code snippet can be found [here](https://github.com/reis-r/nd00333_AZMLND_C2/blob/master/code/enable_Application_Insights.py).
 
