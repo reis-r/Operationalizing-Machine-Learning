@@ -36,6 +36,10 @@ It's important to keep logging of our applications, to fix eventual problems tha
 
 ![Script enabling Application Insights](https://raw.githubusercontent.com/reis-r/nd00333_AZMLND_C2/master/screenshots/enable_application_insights.PNG)
 
+If we access the endpoint via Azure Machine Learning studio, we can see that Application Insights was indeed enabled:
+
+![Azure ML Studio showing Application insights enabled](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/application_insights_is_enabled.PNG)
+
 After enabling the logging of activities, we can access them via SDK using the [get_logs method form the Azure Webservice Class](https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.webservice(class)?view=azure-ml-py#get-logs-num-lines-5000--init-false-). The full code can be found at the [logs.py](https://github.com/reis-r/nd00333_AZMLND_C2/blob/master/code/logs.py) file in this Repository.
 
 ![Logs from the service](https://raw.githubusercontent.com/reis-r/nd00333_AZMLND_C2/master/screenshots/logs.PNG)
