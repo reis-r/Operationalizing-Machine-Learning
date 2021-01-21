@@ -28,6 +28,6 @@ We used a `Standard_DS12_V2 Azure` compute cluster for the training. The trainin
 
 This is a quick screencast showing the trained model, the pipeline endpoint and testing the machine learning HTTP API created by Azure:
 
-[![Screen recording](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=DxCXNT5-WhM)
+[![Screen recording](https://img.youtube.com/vi/DxCXNT5-WhM/0.jpg)](https://www.youtube.com/watch?v=DxCXNT5-WhM)
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
