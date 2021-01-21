@@ -60,6 +60,33 @@ It's important to load-test the model so that performance problems can be detect
 
 We se that the longest requests took about 3399 ms, which is fast enough and far from the default timeout of 60 seconds for scoring on Azure.
 
+### Create, Publish and Consume a Pipeline
+In this step, we create a full pipeline for an AutoML project, to showcase working with Azure ML with continuous integration and continuous delivery. The whole process is done via SDK using a [Jupyter Notebook](https://github.com/reis-r/Operationalizing-Machine-Learning/blob/master/code/aml-pipelines-with-automated-machine-learning-step.ipynb) in an reproductible way.
+
+![Pipeline graph](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/pipeline_graph.png)
+
+After creating the pipeline, we can see it running on the Azure Machine Learning Studio:
+
+![Pipeline runnig on Azure ML Studio](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/pipeline_run.png)
+
+
+![Pipeline endpoint](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/pipeline_endpoint.png)
+![Pipeline endpoint](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/published_pipeline.png)
+
+A pipeline endpoint will be created, so that it can be consumed from other systems via HTTP request (like an AWS storage system, a CI/CD platform like GitHub Actions).
+
+![Pipeline visualization](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/dataset_automl_module.png)
+
+The Azure ML Studio system creates a graphical visualization of the pipeline, to help understanding what is currently being done.
+
+It is possible to follow a pipeline run directly from the Jupyter Notebook using the RunDetails widget:
+
+![The RunDetails widget showing the status of a pipeline run](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/run_details.png)
+
+As you can trigger the pipeline using an HTTP endpoint, you can also schedule the pipeline run via SDK or Azure ML Studio.
+
+![Scheduled run in execution](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/scheduled_run.png)
+
 ## Screen Recording
 
 This is a quick screencast showing the trained model, the pipeline endpoint and testing the machine learning HTTP API created by Azure:
@@ -69,4 +96,4 @@ This is a quick screencast showing the trained model, the pipeline endpoint and 
 (click on the image to open the video)
 
 ## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+This was a long project, with many steps. The Azure ML Studio is a very good tool to quickly experiment with a dataset. But if you find yourself working on Azure in a big project, I suggest to focus on the pipeline design via the SDK. This will make your work reusable, reproductible and less error-prone.
