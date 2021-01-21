@@ -1,6 +1,6 @@
 # Operationalizing Machine Learning
 
-This project was made as part of the Udacity Nanodegree on Machine Learning Engineering with Microsoft Azure. It consists on deploying a model in production, using monitoring tools to evaluate the deploy and building a deployment pipeline based on continuous integration (CI) and continuous delivery (CD) principles.
+This project is part of the Udacity Nanodegree on Machine Learning Engineering with Microsoft Azure. It consists on deploying a model in production, using monitoring tools to evaluate the deploy and building a deployment pipeline based on continuous integration (CI) and continuous delivery (CD) principles.
 
 For the experiments, an AutoML model was trained based on the Bank Marketing dataset provided by Udacity. After the deployment of the trained AutoML model, we enable logging via Application Insights. After deployment, we benchmark the model endpoint and build the Swagger documentation for the HTTP API created. Then we consume the endpoint and build a pipeline endpoint for AutoML.
 
@@ -46,22 +46,22 @@ The Azure service provides a swagger.json file with the API documentation for th
 ![Swagger running on localhost](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/swagger.PNG)
 ![Swagger showing the API documentation](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/swagger_methods.PNG)
 
-The code for the Swagger deployment can be found [here](https://github.com/reis-r/Operationalizing-Machine-Learning/tree/master/code/swagger). It consists of a shell script file to start the docker container and a Python script that will expose our swagger.json to the docker container.
+The code for the Swagger deployment can be found [here](https://github.com/reis-r/Operationalizing-Machine-Learning/tree/master/code/swagger). It consists of a shell script file to start the Docker container and a Python script that will expose our swagger.json to the Docker container.
 
 ### Consume the model endpoint
-Now that the application is deployed, it's time to consume it. For this a script called [endpoint.py](https://github.com/reis-r/Operationalizing-Machine-Learning/blob/master/code/endpoint.py) was used. It calls the deployed model with the Python requests library, using the authentication key and the data to be classified. As a result, we get back the predictions, as expected.
+Now that the application is deployed, it's time to consume it. For this, a script called [endpoint.py](https://github.com/reis-r/Operationalizing-Machine-Learning/blob/master/code/endpoint.py) was used. It calls the deployed model with the Python requests library, using the authentication key and the data to be classified. As a result, we get back the predictions, as expected.
 
 ![The script endpoint.py running](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/endpoint_python_script_working.PNG)
 
 ### Benchmark the model using Apache Benchmark
-It's important to load-test the model so that performance problems can be detected. For that we used the script [benchmark.sh](https://github.com/reis-r/Operationalizing-Machine-Learning/blob/master/code/benchmark.sh). It will use Apache Benchmark to make calls to the deployed service and measure the performance.
+It's important to load-test the model so that performance problems can be detected. For that, we used the script [benchmark.sh](https://github.com/reis-r/Operationalizing-Machine-Learning/blob/master/code/benchmark.sh). It will use Apache Benchmark to make calls to the deployed service and measure the performance.
 
 ![Apache Benchmark running](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/apache_benchmark_running.PNG)
 
 We se that the longest requests took about 3399 ms, which is fast enough and far from the default timeout of 60 seconds for scoring on Azure.
 
 ### Create, Publish and Consume a Pipeline
-In this step, we create a full pipeline for an AutoML project, to showcase working with Azure ML with continuous integration and continuous delivery. The whole process is done via SDK using a [Jupyter Notebook](https://github.com/reis-r/Operationalizing-Machine-Learning/blob/master/code/aml-pipelines-with-automated-machine-learning-step.ipynb) in an reproductible way.
+In this step, we create a full pipeline for an AutoML project, to display working with Azure ML with continuous integration and continuous delivery. The whole process is done via SDK using a [Jupyter Notebook](https://github.com/reis-r/Operationalizing-Machine-Learning/blob/master/code/aml-pipelines-with-automated-machine-learning-step.ipynb) in a reproducible way.
 
 ![Pipeline graph](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/pipeline_graph.png)
 
@@ -73,11 +73,11 @@ After creating the pipeline, we can see it running on the Azure Machine Learning
 ![Pipeline endpoint](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/pipeline_endpoint.png)
 ![Pipeline endpoint](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/published_pipeline.png)
 
-A pipeline endpoint will be created, so that it can be consumed from other systems via HTTP request (like an AWS storage system, a CI/CD platform like GitHub Actions).
+A pipeline endpoint is created, so that it can be consumed from other systems via HTTP request (like an AWS storage system, a CI/CD platform like GitHub Actions).
 
 ![Pipeline visualization](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/dataset_automl_module.png)
 
-The Azure ML Studio system creates a graphical visualization of the pipeline, to help understanding what is currently being done.
+The Azure ML Studio system creates a graphical visualization of the pipeline, to help understanding what is happening.
 
 It is possible to follow a pipeline run directly from the Jupyter Notebook using the RunDetails widget:
 
@@ -96,4 +96,5 @@ This is a quick screencast showing the trained model, the pipeline endpoint and 
 (click on the image to open the video)
 
 ## Standout Suggestions
-This was a long project, with many steps. The Azure ML Studio is a very good tool to quickly experiment with a dataset. But if you find yourself working on Azure in a big project, I suggest to focus on the pipeline design via the SDK. This will make your work reusable, reproductible and less error-prone.
+This was a long project, with many steps. The Azure ML Studio is a very good tool to quickly experiment with a dataset. But if you find yourself working on Azure in a big project, I suggest to focus on the pipeline design via the SDK. This will make your work reusable, reproducible and less error-prone.
+As a means to make the project better, more work should be done in the model itself, maybe trying to archieve better scoring than AutoML, or appliying better data treatment.
