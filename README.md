@@ -46,6 +46,11 @@ The Azure service provides a swagger.json file with the API documentation for th
 
 The code for the Swagger deployment can be found [here](https://github.com/reis-r/Operationalizing-Machine-Learning/tree/master/code/swagger). It consists of a shell script file to start the docker container and a Python script that will expose our swagger.json to the docker container.
 
+### Consume the model endpoint
+Now that the application is deployed, it's time to consume it. For this a script called [endpoint.py](https://github.com/reis-r/Operationalizing-Machine-Learning/blob/master/code/endpoint.py) was used. It calls the deployed model with the Python requests library, using the authentication key and the data to be classified. As a result, we get back the predictions, as expected.
+
+![The script endpoint.py running](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/endpoint_python_script_working.PNG)
+
 ## Screen Recording
 
 This is a quick screencast showing the trained model, the pipeline endpoint and testing the machine learning HTTP API created by Azure:
