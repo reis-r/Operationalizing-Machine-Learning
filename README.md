@@ -38,6 +38,13 @@ After enabling the logging of activities, we can access them via SDK using the [
 
 ![Logs from the service](https://raw.githubusercontent.com/reis-r/nd00333_AZMLND_C2/master/screenshots/logs.PNG)
 
+### Get Swagger Documentation up and running
+The Azure service provides a swagger.json file with the API documentation for the service deployed. For this step, we created a Docker container for the Swagger service. After the configuration, Swagger shows a list of available API calls, what data they take and what they return. It's also possible to make calls using the Swagger interface. This is very useful for documenting the project as other services that will consume the model can know exactly how the data must be exchanged.
+
+![Swagger running on localhost](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/swagger.PNG)
+![Swagger showing the API documentation](https://raw.githubusercontent.com/reis-r/Operationalizing-Machine-Learning/master/screenshots/swagger_methods.PNG)
+
+The code for the Swagger deployment can be found [here](https://github.com/reis-r/Operationalizing-Machine-Learning/tree/master/code/swagger). It consists of a shell script file to start the docker container and a Python script that will expose our swagger.json to the docker container.
 
 ## Screen Recording
 
