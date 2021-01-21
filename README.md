@@ -51,6 +51,7 @@ The code for the Swagger deployment can be found [here](https://github.com/reis-
 This is a quick screencast showing the trained model, the pipeline endpoint and testing the machine learning HTTP API created by Azure:
 
 [![Screen recording](https://img.youtube.com/vi/DxCXNT5-WhM/0.jpg)](https://www.youtube.com/watch?v=DxCXNT5-WhM)
+
 (click on the image to open the video)
 
 ## Standout Suggestions
