@@ -24,10 +24,27 @@ We used a `Standard_DS12_V2 Azure` compute cluster for the training. The trainin
 
 ![Completed Experiment](https://raw.githubusercontent.com/reis-r/nd00333_AZMLND_C2/master/screenshots/completed_experiment.PNG)
 
+### Deploying the best model
+We deployed the best model produced in the last section to an Azure Container Instance (ACI). Authentication was enabled for better security and access control.
+
+![Deploying the best model](https://raw.githubusercontent.com/reis-r/nd00333_AZMLND_C2/master/screenshots/deploying.PNG)
+
+### Enable logging with Application Insights
+It's important to keep logging of our applications, to fix eventual problems that might occur. For that, we enable Application Insights to our deployiment using the SDK. The full code snippet can be found [here](https://github.com/reis-r/nd00333_AZMLND_C2/blob/master/code/enable_Application_Insights.py).
+
+![Script enabling Application Insights](https://raw.githubusercontent.com/reis-r/nd00333_AZMLND_C2/master/screenshots/enable_application_insights.PNG)
+
+After enabling the logging of activities, we can access them via SDK using the [get_logs method form the Azure Webservice Class](https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.webservice(class)?view=azure-ml-py#get-logs-num-lines-5000--init-false-). The full code can be found at the [logs.py file in this repository](https://github.com/reis-r/nd00333_AZMLND_C2/blob/master/code/logs.py).
+
+![Logs from the service](https://raw.githubusercontent.com/reis-r/nd00333_AZMLND_C2/master/screenshots/logs.PNG)
+
+
 ## Screen Recording
 
 This is a quick screencast showing the trained model, the pipeline endpoint and testing the machine learning HTTP API created by Azure:
 
 [![Screen recording](https://img.youtube.com/vi/DxCXNT5-WhM/0.jpg)](https://www.youtube.com/watch?v=DxCXNT5-WhM)
+(click on the image to open the video)
+
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
