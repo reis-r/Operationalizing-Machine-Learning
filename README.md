@@ -8,10 +8,23 @@ For the experiments, an AutoML model was trained based on the Bank Marketing dat
 ![Architectural diagram of the project](https://raw.githubusercontent.com/reis-r/nd00333_AZMLND_C2/master/architectural_diagram.png)
 
 ## Key Steps
-*TODO*: Write a short discription of the key steps. Remeber to include all the screenshots required to demonstrate key steps. 
+### Registering the dataset
+First, we need to register the dataset with Azure, this is a simple step that can be easily done using the Azure Machine Learning Studio.
+
+![Registered Dataset](https://raw.githubusercontent.com/reis-r/nd00333_AZMLND_C2/master/screenshots/registered_datasets.PNG)
+
+### Finding the best model with AutoML
+First, we create an AutoML experiment for a classification task on the `y` attribute with exit criterion of 1 hour and concurrency of 5.
+
+![Configure AutoML run](https://raw.githubusercontent.com/reis-r/nd00333_AZMLND_C2/master/screenshots/configure_run.PNG)
+
+![AutoML configuration](https://raw.githubusercontent.com/reis-r/nd00333_AZMLND_C2/master/screenshots/automl_tweaks.PNG)
+
+We used a `Standard_DS12_V2 Azure` compute cluster for the training. The training took about half an hour and the result was a *VotingEnsemble* model with 91.96% accuracy.
+
+![Completed Experiment](https://raw.githubusercontent.com/reis-r/nd00333_AZMLND_C2/master/screenshots/completed_experiment.PNG)
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
